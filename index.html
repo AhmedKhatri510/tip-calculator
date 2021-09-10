@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <main class="main">
+      <h1 class="heading">spli<br />tter</h1>
+      <div class="container">
+        <section class="section--1">
+          <div class="bill-container">
+            <label for="bill" class="label-light">Bill</label>
+            <img src="./images/icon-dollar.svg" alt="dollar" id="icon-dollar" />
+            <input
+              type="number"
+              name="bill"
+              id="bill"
+              placeholder="0"
+              required
+              class="inputs"
+            />
+          </div>
+          <div class="tip-container">
+            <label for="select-tip" class="label-light">Select Tip %</label>
+            <div class="tip-percent">
+              <label for="" class="label-dark" data-tip="5">5%</label>
+              <label for="" class="label-dark" data-tip="10">10%</label>
+              <label for="" class="label-dark" data-tip="15">15%</label>
+              <label for="" class="label-dark" data-tip="25">25%</label>
+              <label for="" class="label-dark" data-tip="50">50%</label>
+              <input type="number" placeholder="Custom" class="custom inputs" />
+            </div>
+          </div>
+          <div class="peoples">
+            <label for="no-of-peoples" class="label-light"
+              >No of Peoples<span id="alert-noofpeoples"
+                >Can't be zero</span
+              ></label
+            >
+
+            <img src="./images/icon-person.svg" alt="person" id="icon-person" />
+            <input
+              type="number"
+              name="no-of-peoples"
+              id="no-of-peoples"
+              placeholder="1"
+              required
+              class="inputs"
+            />
+          </div>
+        </section>
+        <section class="section--2">
+          <div class="amounts">
+            <div class="total-tip">
+              <p class="totals">
+                Total Tip <br />
+                <span>/ person</span>
+              </p>
+              <p class="amount">$0</p>
+            </div>
+            <div class="total-amount">
+              <p class="totals">
+                Total <br />
+                <span>/ person</span>
+              </p>
+              <p class="amount">$0</p>
+            </div>
+          </div>
+          <button class="btn--reset">Reset</button>
+        </section>
+      </div>
+    </main>
+    <!-- Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
+    person Total / person Reset -->
+  </body>
+</html>

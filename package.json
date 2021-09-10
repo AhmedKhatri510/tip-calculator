@@ -1,0 +1,25 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "browserslist": "last 10 versions",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhmedKhatri510/Natours.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AhmedKhatri510/Natours/issues"
+  },
+  "homepage": "https://github.com/AhmedKhatri510/Natours#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
