@@ -231,10 +231,14 @@ img {
   }
 
   .main {
-    justify-content: flex-end;
+    justify-content: center;
+  }
+
+  .heading {
   }
 
   .container {
     flex-direction: column;
+    margin-bottom: -5rem;
   }
 }
