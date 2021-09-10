@@ -46,9 +46,9 @@ const calcAmount = function () {
   amounts[0].innerText = `$${Math.round(
     noOfPeoples * (tipPercent / 100) * inputBill
   )}`;
-  amounts[1].innerText = `$${
-    Math.round(noOfPeoples * (tipPercent / 100) * inputBill) + inputBill
-  }`;
+  amounts[1].innerText = `$${Math.round(
+    noOfPeoples * ((tipPercent / 100) * inputBill + inputBill)
+  )}`;
 };
 
 //getting no of peoples
