@@ -224,3 +224,17 @@ img {
 .btn--reset:hover {
   background-color: var(--color-light-grayish-cyan-1);
 }
+
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 56%;
+  }
+
+  .main {
+    justify-content: flex-end;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+}
