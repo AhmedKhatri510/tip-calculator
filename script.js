@@ -17,14 +17,15 @@ const resetTipInputs = function (e = undefined) {
   tipPercent = domCustom.value || tipPercent;
   console.log(tipPercent);
   domTipPercents.forEach((el) => {
-    if (el.dataset.tip !== e?.target.dataset.tip)
-      el.style.backgroundColor = "hsl(183, 100%, 15%)";
+    if (el.dataset.tip !== e?.target.dataset.tip) el.classList.remove("active");
   });
 };
 
 const setTipPercent = function (e) {
+  console.log(e);
   domCustom.value = "";
-  e.target.style.backgroundColor = "hsl(172, 67%, 45%)";
+  // e.target.style.backgroundColor = "hsl(172, 67%, 45%)";
+  e.target.classList.toggle("active");
   tipPercent = +e.target.dataset.tip;
   resetTipInputs(e);
 };
@@ -44,10 +45,10 @@ domCustom.addEventListener("keyup", function (e) {
 const amounts = document.querySelectorAll(".amount");
 const calcAmount = function () {
   amounts[0].innerText = `$${Math.round(
-    noOfPeoples * (tipPercent / 100) * inputBill
+    (tipPercent / 100 / noOfPeoples) * inputBill
   )}`;
   amounts[1].innerText = `$${Math.round(
-    noOfPeoples * ((tipPercent / 100) * inputBill + inputBill)
+    ((tipPercent / 100) * inputBill + inputBill) / noOfPeoples
   )}`;
 };
 
